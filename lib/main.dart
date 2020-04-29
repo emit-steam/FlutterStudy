@@ -4,7 +4,7 @@ void main() {
   runApp(MyApp());
 }
 
-//모든것은 위젯이다 
+//모든것은 위젯이다
 class MyApp extends StatelessWidget { // statelesWidget 단순히 화면에 표현되는 UI 컴포넌트
   // This widget is the root of your application.
   @override
