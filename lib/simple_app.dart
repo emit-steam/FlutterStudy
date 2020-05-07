@@ -4,7 +4,7 @@ void main() => runApp(MaterialApp( //runApp의 인자로 MaterialApp 만들고
       title: 'Hello Flutter', // 앱 이름
       home: Scaffold(
         // 위젯의 몸체로 Scaffold 위젯 지정
-        appBar: AppBar(title: Text('Hello Flutter')),
+        appBar: AppBar(title: Text('Hello Flutter!')),
         body: Text('Hello Flutter'), // 요기를 나만의 위젯으로 교체하면서 앱 화면 만들어
       ),
     ));

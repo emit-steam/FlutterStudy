@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
-//모든것은 위젯이다
-class MyApp extends StatelessWidget { // statelesWidget 단순히 화면에 표현되는 UI 컴포넌트
+class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo', // 앱 이름
+      title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -21,18 +18,14 @@ class MyApp extends StatelessWidget { // statelesWidget 단순히 화면에 표�
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.yellow, // 타이틀바 색상
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'), // 위젯의 몸체
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget { // 몸체 클래스, statefulWidget 임 >> createState()를 통해 상태 담당 클래스 지정 가능 (조건에 따라 내용 갱신 가능)
+class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -47,15 +40,14 @@ class MyHomePage extends StatefulWidget { // 몸체 클래스, statefulWidget �
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState(); //실제 상태값은 _MyHomePageState 클래스에 지정함
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> { // 위젯의 상태를 담당하는 클래스
-  // _ == private
+class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
-    setState(() { // setState() 호출하면 상태 변했어 위젯 갱신해 라고 함
+    setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
       // so that the display can reflect the updated values. If we changed
@@ -104,12 +96,12 @@ class _MyHomePageState extends State<MyHomePage> { // 위젯의 상태를 담당
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.display1,
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton( // 버튼, 위치 변경 가능, onPressed 이벤트 발생하면 _incrementCounter() 메서드 호출
+      floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
